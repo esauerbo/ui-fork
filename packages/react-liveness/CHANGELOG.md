@@ -1,5 +1,11 @@
 # @aws-amplify/ui-react-liveness
 
+## 2.0.13
+
+### Patch Changes
+
+- [#4737](https://github.com/aws-amplify/amplify-ui/pull/4737) [`f5338f6c2`](https://github.com/aws-amplify/amplify-ui/commit/f5338f6c23c5228b1a44f9fb26e81fb805704949) Thanks [@reesscot](https://github.com/reesscot)! - chore(liveness): upgrade blazeface model
+
 ## 2.0.12
 
 ### Patch Changes
