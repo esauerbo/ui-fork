@@ -52,6 +52,7 @@ const ShowPasswordButtonPrimitive: Primitive<
     <Button
       aria-checked={fieldType !== 'password'}
       ariaLabel={showPasswordButtonLabel}
+      colorTheme={hasError ? 'error' : undefined}
       className={showPasswordButtonClass}
       ref={ref}
       role="switch"

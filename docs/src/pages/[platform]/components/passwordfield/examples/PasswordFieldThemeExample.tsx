@@ -6,17 +6,17 @@ const theme: Theme = {
     components: {
       passwordfield: {
         button: {
-          color: { value: 'red' },
-          _hover: {
-            backgroundColor: { value: '{colors.blue.60}' },
-            color: { value: 'white' },
-          },
-          _active: {
-            backgroundColor: { value: '{colors.green.60}' },
-            color: { value: 'white' },
-          },
-          _focus: {
-            color: { value: 'white' },
+          _error: {
+            backgroundColor: { value: 'orange' },
+            _focus: {
+              backgroundColor: { value: 'orange' },
+              boxShadow: { value: 'white' },
+            },
+            _hover: {
+              color: { value: 'brown' },
+              backgroundColor: { value: 'blue' },
+            },
+            _active: { backgroundColor: { value: 'yellow' } },
           },
         },
       },
@@ -35,7 +35,7 @@ const theme: Theme = {
 export const PasswordFieldThemeExample = () => {
   return (
     <ThemeProvider theme={theme} colorMode="light">
-      <PasswordField label="Password" />
+      <PasswordField hasError={true} label="Password" />
     </ThemeProvider>
   );
 };
