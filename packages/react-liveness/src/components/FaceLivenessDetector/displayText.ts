@@ -11,6 +11,7 @@ export type HintDisplayText = {
   hintIlluminationTooDarkText?: string;
   hintIlluminationNormalText?: string;
   hintHoldFaceForFreshnessText?: string;
+  hintCenterFaceText?: string;
 };
 
 export type CameraDisplayText = {
@@ -19,24 +20,25 @@ export type CameraDisplayText = {
   cameraNotFoundHeadingText?: string;
   cameraNotFoundMessageText?: string;
   retryCameraPermissionsText?: string;
+  waitingCameraPermissionText?: string;
+  a11yVideoLabelText?: string;
 };
 
 export type InstructionDisplayText = {
-  instructionsHeaderHeadingText?: string;
-  instructionsHeaderBodyText?: string;
-  instructionsBeginCheckText?: string;
-  photosensitivyWarningHeadingText?: string;
-  photosensitivyWarningBodyText?: string;
-  photosensitivyWarningInfoText?: string;
-  instructionListHeadingText?: string;
   goodFitCaptionText?: string;
   goodFitAltText?: string;
+  photosensitivityWarningBodyText?: string;
+  photosensitivityWarningHeadingText?: string;
+  photosensitivityWarningInfoText?: string;
+  photosensitivityWarningLabelText?: string;
+  // TODO remove this typo in next MV bump
+  photosensitivyWarningBodyText?: string;
+  photosensitivyWarningHeadingText?: string;
+  photosensitivyWarningInfoText?: string;
+  photosensitivyWarningLabelText?: string;
+  startScreenBeginCheckText?: string;
   tooFarCaptionText?: string;
   tooFarAltText?: string;
-  instructionListStepOneText?: string;
-  instructionListStepTwoText?: string;
-  instructionListStepThreeText?: string;
-  instructionListStepFourText?: string;
 };
 
 export type StreamDisplayText = {
@@ -69,39 +71,19 @@ export type ErrorDisplayTextFoo = typeof defaultErrorDisplayText;
 export type ErrorDisplayText = Partial<ErrorDisplayTextFoo>;
 
 export const defaultLivenessDisplayText: Required<LivenessDisplayText> = {
-  instructionsHeaderHeadingText: 'Liveness check',
-  instructionsHeaderBodyText:
-    'You will go through a face verification process to prove that you are a real person.',
-  instructionsBeginCheckText: 'Begin check',
-  photosensitivyWarningHeadingText: 'Photosensitivity warning',
-  photosensitivyWarningBodyText:
-    'This check displays colored lights. Use caution if you are photosensitive.',
-  photosensitivyWarningInfoText:
-    'A small percentage of individuals may experience epileptic seizures when exposed to colored lights. Use caution if you, or anyone in your family, have an epileptic condition.',
-  instructionListHeadingText: 'Follow the instructions to complete the check:',
-  goodFitCaptionText: 'Good fit',
-  goodFitAltText:
-    "Ilustration of a person's face, perfectly fitting inside of an oval.",
-  tooFarCaptionText: 'Too far',
-  tooFarAltText:
-    "Illustration of a person's face inside of an oval; there is a gap between the perimeter of the face and the boundaries of the oval.",
-  instructionListStepOneText:
-    'When an oval appears, follow the instructions to fit your face in it.',
-  instructionListStepTwoText: "Maximize your screen's brightness.",
-  instructionListStepThreeText:
-    'Make sure your face is not covered with sunglasses or a mask.',
-  instructionListStepFourText:
-    'Move to a well-lit place that is not in direct sunlight.',
   cameraMinSpecificationsHeadingText:
     'Camera does not meet minimum specifications',
   cameraMinSpecificationsMessageText:
     'Camera must support at least 320*240 resolution and 15 frames per second.',
-  cameraNotFoundHeadingText: 'Camera not accessible.',
+  cameraNotFoundHeadingText: 'Camera is not accessible.',
   cameraNotFoundMessageText:
-    'Check that camera is connected and camera permissions are enabled in settings before retrying.',
-  retryCameraPermissionsText: 'Retry',
+    'Check that a camera is connected and there is not another application using the camera. You may have to go into settings to grant camera permissions and close out all instances of your browser and retry.',
+  a11yVideoLabelText: 'Webcam for liveness check',
   cancelLivenessCheckText: 'Cancel Liveness check',
-  recordingIndicatorText: 'Rec',
+  goodFitCaptionText: 'Good fit',
+  goodFitAltText:
+    "Ilustration of a person's face, perfectly fitting inside of an oval.",
+  hintCenterFaceText: 'Center your face',
   hintMoveFaceFrontOfCameraText: 'Move face in front of camera',
   hintTooManyFacesText: 'Ensure only one face is in front of camera',
   hintFaceDetectedText: 'Face detected',
@@ -114,6 +96,25 @@ export const defaultLivenessDisplayText: Required<LivenessDisplayText> = {
   hintIlluminationTooDarkText: 'Move to brighter area',
   hintIlluminationNormalText: 'Lighting conditions normal',
   hintHoldFaceForFreshnessText: 'Hold still',
+  photosensitivityWarningBodyText:
+    'This check flashes different colors. Use caution if you are photosensitive.',
+  photosensitivityWarningHeadingText: 'Photosensitivity warning',
+  photosensitivityWarningInfoText:
+    'Some people may experience epileptic seizures when exposed to colored lights. Use caution if you, or anyone in your family, have an epileptic condition.',
+  photosensitivityWarningLabelText: 'More information about photosensitivity',
+  photosensitivyWarningBodyText:
+    'This check flashes different colors. Use caution if you are photosensitive.',
+  photosensitivyWarningHeadingText: 'Photosensitivity warning',
+  photosensitivyWarningInfoText:
+    'Some people may experience epileptic seizures when exposed to colored lights. Use caution if you, or anyone in your family, have an epileptic condition.',
+  photosensitivyWarningLabelText: 'More information about photosensitivity',
+  retryCameraPermissionsText: 'Retry',
+  recordingIndicatorText: 'Rec',
+  startScreenBeginCheckText: 'Start video check',
+  tooFarCaptionText: 'Too far',
+  tooFarAltText:
+    "Illustration of a person's face inside of an oval; there is a gap between the perimeter of the face and the boundaries of the oval.",
+  waitingCameraPermissionText: 'Waiting for you to allow camera permission.',
   ...defaultErrorDisplayText,
 };
 
