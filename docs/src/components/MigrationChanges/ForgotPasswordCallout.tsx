@@ -2,7 +2,7 @@ import { Alert, Text } from '@aws-amplify/ui-react';
 import { useRouter } from 'next/router';
 import { Framework, PREV_MAJOR_VERSIONS } from '../../data/frameworks';
 
-export const ForgotPasswordRenameAlert = ({ framework }) => {
+export const ForgotPasswordCallout = ({ framework }) => {
   const {
     query: { platform = 'react' },
   } = useRouter();
@@ -18,7 +18,7 @@ export const ForgotPasswordRenameAlert = ({ framework }) => {
     <Alert
       role="none"
       variation="info"
-      heading={`ui-${framework}@${prevFrameworkVersion}.x`}
+      heading={`@aws-amplify/ui-${framework}@${prevFrameworkVersion}.x`}
     >
       <Text>
         Use <code>resetPassword</code> in place of <code>forgotPassword</code>{' '}
