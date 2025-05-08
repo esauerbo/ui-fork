@@ -1,5 +1,11 @@
 # @aws-amplify/ui
 
+## 6.5.1
+
+### Patch Changes
+
+- [#5807](https://github.com/aws-amplify/amplify-ui/pull/5807) [`7a12237d2`](https://github.com/aws-amplify/amplify-ui/commit/7a12237d2c96107ef97d3c62d9d26d6b6f1d824c) Thanks [@zerbusdetroy](https://github.com/zerbusdetroy)! - Fix some FR and ES authenticator translations"
+
 ## 6.5.0
 
 ### Minor Changes
